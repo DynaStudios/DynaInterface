@@ -47,6 +47,7 @@
     <Compile Include="Components\Button.cs" />
     <Compile Include="Components\CheckBox.cs" />
     <Compile Include="Components\DropDown.cs" />
+    <Compile Include="Components\IconButton.cs" />
     <Compile Include="Components\IGuiItem.cs" />
     <Compile Include="Components\InputText.cs" />
     <Compile Include="Components\Items\DropDownItem.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="ScreenFactory.cs" />
     <Compile Include="ScreenManager.cs" />
     <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\HorizontalInfo.cs" />
     <Compile Include="Screens\LoadingScreen.cs" />
     <Compile Include="Screens\MenuScreen.cs" />
     <Compile Include="Screens\WindowScreen.cs" />

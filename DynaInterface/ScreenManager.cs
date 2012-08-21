@@ -19,6 +19,7 @@ namespace DynaStudios.UI
         public SpriteBatch SpriteBatch { get; protected set; }
         public SpriteFont Font { get; protected set; }
         public SpriteFont SmallFont { get; protected set; }
+        public SpriteFont BigFont { get; protected set; }
         public Texture2D BlankTexture { get; protected set; }
 
         public bool TraceEnabled { get; set; }
@@ -49,6 +50,7 @@ namespace DynaStudios.UI
 
             Font = content.Load<SpriteFont>("Fonts/menu");
             SmallFont = content.Load<SpriteFont>("Fonts/menu_small");
+            BigFont = content.Load<SpriteFont>("Fonts/bigfont");
             BlankTexture = content.Load<Texture2D>("Images/UI/BlankTexture");
 
             //Let all screens load their content
