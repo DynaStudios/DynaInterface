@@ -10,7 +10,7 @@ namespace DynaStudios.UI.Components
     public class Button : IGuiItem
     {
         protected Texture2D ButtonTexture;
-        private bool _isHovered;
+        public bool IsHovered;
         private bool _playedClickSound;
         private bool _playedHoverSound;
 
@@ -74,7 +74,7 @@ namespace DynaStudios.UI.Components
             var rec = new Rectangle((int) Position.X, (int) Position.Y, (int) Size.X, (int) Size.Y);
 
             //Fill Button
-            if (_isHovered)
+            if (IsHovered)
             {
                 spriteBatch.Draw(ButtonTexture, rec, HoverColor*Alpha);
             }
@@ -110,7 +110,7 @@ namespace DynaStudios.UI.Components
         {
             if (input.MouseState.IsMouseIn(Position, Size))
             {
-                _isHovered = true;
+                IsHovered = true;
 
                 if (!_playedHoverSound && HoverSound != null)
                 {
@@ -125,7 +125,7 @@ namespace DynaStudios.UI.Components
             }
             else
             {
-                _isHovered = false;
+                IsHovered = false;
                 _playedHoverSound = false;
             }
         }

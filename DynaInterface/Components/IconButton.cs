@@ -45,7 +45,10 @@ namespace DynaStudios.UI.Components
             }
 
             Rectangle rec = new Rectangle((int)newPosition.X, (int)newPosition.Y, (int)Size.X, (int)Size.Y);
-            spriteBatch.Draw(Icon, rec, Color.White);
+            if(!IsHovered)
+                spriteBatch.Draw(Icon, rec, Color.White);
+            else
+                spriteBatch.Draw(Icon, rec, HoverColor);                
 
             var textPosition = newPosition;
             textPosition.Y += Size.Y + 10;

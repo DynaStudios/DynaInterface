@@ -38,7 +38,10 @@ namespace DynaStudios.UI.Screens
 
         public override void HandleInput(GameTime gameTime, InputState input)
         {
-            base.HandleInput(gameTime, input);
+            foreach (IGuiItem panelEntry in PanelEntries)
+            {
+                panelEntry.HandleInput(input);
+            }
         }
 
         public override void Draw(GameTime gameTime)
